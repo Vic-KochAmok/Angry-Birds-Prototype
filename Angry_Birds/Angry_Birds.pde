@@ -22,8 +22,12 @@ void draw(){
 
 
 void mousePressed(){
+  updateModel();
+  println(x,y);
+}
+
+void updateModel(){
   x = u0*t;
   y = (-0.5*g*t*t + v0*t + y0)*-1;
   t = t + 1;
-  println(x,y);
 }
